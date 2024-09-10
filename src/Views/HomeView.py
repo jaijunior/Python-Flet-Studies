@@ -1,5 +1,6 @@
 import flet as ft
 from .ConfigView import ConfigView
+from .Tickets.TicketsView import TicketsView
 
 class HomeView():
     def __init__(self, page: ft.Page):
@@ -16,9 +17,9 @@ class HomeView():
         pass
 
     def abrir_config(self, e):
-        config_view = ConfigView(self.page)
+        config_view = TicketsView(self.page)
         self.page.views.append(config_view.build())
-        self.page.go("/config")
+        self.page.go("/tickets")
 
     def build(self):
         # Retorna a interface principal da tela To-Do
